@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlueDark"
+        android:gravity="center_vertical"
+        android:paddingBottom="16dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/coloWhite"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:paddingBottom="42sp"
+            android:gravity="center_vertical"
+            android:text="@string/glass_of_beer_price"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:text="@string/quantity"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/btnMinus"
+                android:layout_width="35dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:background="@color/coloWhite"
+                android:scaleType="centerInside"
+                android:src="@drawable/minus" />
+
+            <TextView
+                android:id="@+id/qnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0"
+                android:gravity="center"
+                android:text="@string/zero"
+
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <ImageButton
+                android:id="@+id/btnPlus"
+                android:layout_width="35dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:background="@color/coloWhite"
+                android:scaleType="centerInside"
+                android:src="@drawable/plas" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center_vertical"
+                android:text="Prise, $:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/prise_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center_vertical"
+                android:text="@string/zero"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+
+            <TextView
+                android:id="@+id/mname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/mnamer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="25dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+
+            <Button
+                android:id="@+id/btncnsl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/stal"
+                android:gravity="center"
+                android:paddingLeft="25dp"
+                android:paddingTop="15dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="15dp"
+                android:text="Cancel"
+                android:textColor="@color/coloWhite"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btncheckt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/stal"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="checkout"
+                android:textColor="@color/coloWhite"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlueDark"
+            android:gravity="center_vertical"
+            android:paddingTop="16dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+</ScrollView>

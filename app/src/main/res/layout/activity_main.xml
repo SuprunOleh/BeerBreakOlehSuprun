@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorBlueDark"
+        >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="28sp"
+        android:textColor="@color/coloWhite"
+        android:layout_margin="16dp"
+        android:text="@string/hallo_people_it_s_me" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/beer3reak3" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+
+        android:gravity="center"
+        android:layout_margin="16dp"
+        android:textColor="@color/coloWhite"
+        android:text="@string/wannaBeer"
+
+        />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/coloWhite"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:text="@string/glass_of_beer_price"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1
+">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_gravity="center_vertical"
+
+            android:textColor="@color/black"
+            android:text="@string/quantity"
+            />
+
+            <ImageButton
+                android:id="@+id/btnMinus"
+                android:layout_width="35dp"
+                android:layout_height="75dp"
+                android:scaleType="centerCrop"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:background="@color/coloWhite"
+                android:src="@drawable/minus"/>
+            <TextView
+                android:id="@+id/qnt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="@string/zero"/>
+
+            <ImageButton
+                android:id="@+id/btnPlus"
+                android:layout_width="35dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@color/coloWhite"
+                android:scaleType="centerCrop"
+                android:src="@drawable/plas" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:text="@string/prisE"
+            />
+
+            <TextView
+                android:id="@+id/prise_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center_vertical"
+                android:text="@string/zero"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            >
+
+
+            <TextView
+                android:id="@+id/mname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:text=""
+                />
+
+            <TextView
+                android:id="@+id/mnamer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:text=""
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:layout_marginBottom="25dp"
+            android:layout_weight="1">
+
+
+            <Button
+                android:id="@+id/btncnsl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:paddingRight="25dp"
+                android:paddingLeft="25dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_gravity="center"
+                android:background="@drawable/stal"
+                android:textColor="@color/coloWhite"
+                android:text="@string/canceL"
+                />
+
+            <Button
+                android:id="@+id/btncheckt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/stal"
+                android:padding="15dp"
+                android:gravity="center"
+                android:textColor="@color/coloWhite"
+                android:text="@string/checkouT"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+    </ScrollView>

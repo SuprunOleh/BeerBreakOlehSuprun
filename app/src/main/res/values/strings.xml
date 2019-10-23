@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">BeerBreakOlehSuprun</string>
+    <string name="wannaBeer">How about draft beer?</string>
+    <string name="number">Number:</string>
+    <string name="quantity">Quantity:</string>
+    <string name="zero">0</string>
+    <string name="checkouT">checkout</string>
+    <string name="canceL">Cancel</string>
+    <string name="prisE">Prise, $:</string>
+    <string name="hallo_people_it_s_me">Hallo people! It\'s me</string>
+    <string name="glass_of_beer_price">Glass of beer 0.5L, price $ 5</string>
+    <string name="dollar">$</string>
+    <string name="your_name">Your name:</string>
+    <string name="input">Input your name in this fild</string>
+    <string name="ok">Ok</string>
+
+</resources>
