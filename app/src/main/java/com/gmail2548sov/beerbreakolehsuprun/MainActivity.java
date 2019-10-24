@@ -53,18 +53,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             total = savedInstanceState.getInt(KEY_COUNT, 0);
             qnt.setText(total + "");
             txprise.setText(priceone * total + "");
-            if (savedInstanceState.getInt("end",1) == 0) {
-
+            if (savedInstanceState.getInt("end", 1) == 0) {
 
 
                 mname.setText("Name:");
                 btncns.setEnabled(false);
                 btncns.setBackgroundColor(ContextCompat.getColor(this, R.color.grey2));
-                btncheck.setText("Oder by e-mail");
+                btncheck.setText("r=Order by e-mail");
                 btnPlus.setEnabled(false);
                 btnMinus.setEnabled(false);
                 end1 = 0;
-
 
 
             }
@@ -76,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt(KEY_COUNT, total);
-        if (end1 ==0) outState.putInt("end",0);
+        if (end1 == 0) outState.putInt("end", 0);
 
     }
 
@@ -103,23 +101,51 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 txprise.setText(prise + "");
                 break;
             case R.id.btncheckt:
-                if (end1==0) {
+                if (end1 == 0) {
                     Intent email = new Intent(Intent.ACTION_SEND);
 
-                    email.putExtra(Intent.EXTRA_EMAIL, new String[]{"2548sov@gmail.com"});
+                   // if (email != null) {
 
-                    email.putExtra(Intent.EXTRA_SUBJECT, "Order_Beer");
-                    email.putExtra(Intent.EXTRA_TEXT, "Order for " + total + " glasses of beer, $ " + prise);
+                        email.putExtra(Intent.EXTRA_EMAIL, new String[]{"2548sov@gmail.com"});
 
-                    email.setType("message/rfc822");
+                        email.putExtra(Intent.EXTRA_SUBJECT, "Order_Beer");
+                        email.putExtra(Intent.EXTRA_TEXT, "Order for " + total + " glasses of beer, $ " + prise);
 
-                    startActivity(email);
+                        email.setType("message/rfc822");
+
+                        try {
+                            startActivity(email);
+                        } catch (android.content.ActivityNotFoundException ex) {
+                            Toast.makeText(this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+
+                            //выход из приложения
+                            /*Intent homeIntent = new Intent(Intent.ACTION_SEND);
+                            homeIntent.addCategory(Intent.CATEGORY_HOME);
+                            homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(homeIntent);*/
+                        }
+
+
+                    /*
+
+                    try {
+                        startActivity(Intent.createChooser(i, "Send mail..."));
+                    } catch (android.content.ActivityNotFoundException ex) {
+                        Toast.makeText(MyActivity.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+                    }
+
+                    */
+
+
+                    //}
 
                 }
-                if (end1 != 0 && prise>0) {
+                if (end1 != 0 && total > 0) {
                     Intent intent = new Intent(this, Info.class);
                     intent.putExtra("totalm", total);
-                    startActivityForResult(intent, 3);} else  if (end1>0) Toast.makeText(this, "You have an empty basket", Toast.LENGTH_SHORT).show();
+                    startActivityForResult(intent, 3);
+                } else if (total < 1)
+                    Toast.makeText(this, "You have an empty basket", Toast.LENGTH_SHORT).show();
 
                 break;
         }
@@ -131,14 +157,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (data == null || requestCode != 3) {
             return;
         }
-        if (resultCode == 0 || resultCode ==2) {
+        if (resultCode == 0 || resultCode == 2) {
             total = 0;
             prise = 0;
             qnt.setText(total + "");
             txprise.setText(prise + "");
             mname.setText("");
             mnamer.setText("");
-            end1=1;
+            end1 = 1;
         } else {
 
             mnamer.setText(data.getStringExtra("name"));
@@ -147,21 +173,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             qnt.setText(data.getStringExtra("glass"));
             btncns.setBackgroundColor(ContextCompat.getColor(this, R.color.grey2));
             txprise.setText(data.getStringExtra("sum"));
-            end1 = data.getIntExtra("end2",1);
+            end1 = data.getIntExtra("end2", 1);
             btncns.setEnabled(false);
-            btncheck.setText("Oder by e-mail");
+            btncheck.setText("Order by e-mail");
 
             btnPlus.setEnabled(false);
             btnMinus.setEnabled(false);
-
 
 
         }
 
 
     }
-
-
 
 
 }
