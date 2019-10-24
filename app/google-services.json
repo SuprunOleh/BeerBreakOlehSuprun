@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "588758758245",
+    "firebase_url": "https://beerbreaksov.firebaseio.com",
+    "project_id": "beerbreaksov",
+    "storage_bucket": "beerbreaksov.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588758758245:android:8e58cfdd9cb4a602e4278c",
+        "android_client_info": {
+          "package_name": "com.gmail2548sov.beerbreakolehsuprun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "588758758245-1tpbqekkkjiguqlgki4qr67nemr7n12s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzVaryhM2yt1Qos6NJH4XKpuECqNtKJ4E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "588758758245-1tpbqekkkjiguqlgki4qr67nemr7n12s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

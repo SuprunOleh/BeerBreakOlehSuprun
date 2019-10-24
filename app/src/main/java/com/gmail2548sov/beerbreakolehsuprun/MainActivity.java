@@ -60,8 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mname.setText("Name:");
                 btncns.setEnabled(false);
                 btncns.setBackgroundColor(ContextCompat.getColor(this, R.color.grey2));
-                btncheck.setText("Oder by e-m333ail");
-
+                btncheck.setText("Oder by e-mail");
                 btnPlus.setEnabled(false);
                 btnMinus.setEnabled(false);
                 end1 = 0;
@@ -107,10 +106,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (end1==0) {
                     Intent email = new Intent(Intent.ACTION_SEND);
 
-                    email.putExtra(Intent.EXTRA_EMAIL, new String[]{"alex@devcolibri.com"});
+                    email.putExtra(Intent.EXTRA_EMAIL, new String[]{"2548sov@gmail.com"});
 
-                    email.putExtra(Intent.EXTRA_SUBJECT, "Oder_Beer");
-                    email.putExtra(Intent.EXTRA_TEXT, "order for " + total + " glasses of beer, $ " + prise);
+                    email.putExtra(Intent.EXTRA_SUBJECT, "Order_Beer");
+                    email.putExtra(Intent.EXTRA_TEXT, "Order for " + total + " glasses of beer, $ " + prise);
 
                     email.setType("message/rfc822");
 
